@@ -24,4 +24,4 @@ COPY --from=build /app/adminio-ui/dist /usr/share/nginx/html
 
 EXPOSE 80
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["/bin/sh", "-c", "envsubst < /usr/share/nginx/html/assest/env.template.js > /usr/share/nginx/html/assets/env.js && nginx -g 'daemon off;'"]

@@ -1,4 +1,4 @@
 export const environment = {
-  production: false,
-  apiBaseUrl: "http://localhost:8080"
+  production: window["env"]["adminioProd"] || false,
+  apiBaseUrl: window["env"]["apiUrl"] || "http://localhost:8080"
 };
