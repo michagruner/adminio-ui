@@ -5,7 +5,6 @@ LABEL maintainer="rzrbld <razblade@gmail.com>"
 WORKDIR /app
 
 ENV PATH /app/node_modules/.bin:$PATH
-ENV API_BASE_URL http://localhost:8080
 ENV ADMINIO_PROD false
 
 RUN \
